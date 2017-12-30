@@ -1,0 +1,8 @@
+baseurl: ""
+markdown: kramdown
+permalink: blog/:title.html
+url: http://localhost:4000
+
+#Sass
+sass:
+  style: compressed

@@ -1,0 +1,137 @@
+---
+---
+@import "materialize";
+
+body {
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+     background-color: #FAFAFA;
+
+}
+ main {
+     flex: 1 0 auto;
+ }
+
+nav {
+    height: 56px;
+    line-height: 56px;
+}
+
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+    height: 56px;
+    line-height: 56px;
+}
+
+nav .button-collapse i {
+    height: 56px;
+    line-height: 56px;
+}
+
+nav .brand-logo {
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media only screen and (min-width: 601px){
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 56px;
+        line-height: 56px;
+    }
+}
+
+/*
+nav ul li:hover {
+   background-color: white;
+}
+*/
+
+
+.nav-color{
+  background-color: #262b33/*#062F4F; */
+}
+.intro-row{
+  color:#eaeaea; /*#0ce24e;*/
+}
+.intro-main{
+  background-image: url("../assets/images/mountain-white.jpg");
+  background-position: 0% 25%;
+  /*background-color:#4abdac; /*#E0E0E0;/*#0294A5;*/
+}
+
+.text-logo-blue{
+  color: #0294A5;
+}
+.text-logo{
+  color:#0294a5;
+}
+
+.page-footer{
+  color: #04010F;
+  background-color:#F2F2F2;
+
+}
+
+.main-banner-wrapper{
+  background-color:#0294a5;
+  position:relative;
+}
+.main-banner-wrapper .row{
+  margin:0
+}
+
+.main-banner-wrapper h1{
+  margin:0;
+  padding:5% 0 5% 0;
+}
+
+.main-banner-wrapper h2{
+  font-size:1.5em;
+}
+
+.main-banner-wrapper h2.intro-med{
+    font-size:1.5em;
+}
+.main-banner-wrapper h2.intro-small{
+    font-size:1.5em;
+}
+
+.main-banner-wrapper i{
+  font-size:2em;
+  display:inline-flex;
+  vertical-align: middle;
+  padding-right:7px;
+}
+.main-banner-wrapper .btn{
+/*  padding:0 1.2rem; */
+}
+
+i.icon-circle{
+  border-radius:50%;
+  border:4px solid #FFF;
+  padding:.2em;
+  /*background: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,.5)); */
+}
+
+.main-banner-overlay{
+  position:absolute;
+  height:36px;
+  width:100%;
+  left:0;
+  bottom:0;
+  background-color:rgba(255, 255, 255, 0.4);
+  /*background-color:#FAFAFA; */
+}
+
+.main-banner-content{
+  padding-bottom: 18px;
+}
+
+
+.hire-large{
+  font-size:1.5em;
+}
+
+.text-logo-color{
+  color:#0294a5;
+}
