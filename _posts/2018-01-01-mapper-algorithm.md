@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "Core Topological Data Analysis"
 subtitle: "The Mapper Algorithm"
-tags: [tda, topological data analysis, mapper, open cover, nerve theorem, data]
+tags: [tda, topological data analysis, mapper, Ayasdi, graph, data visualization, data reduction, clustering]
 author: "Mike"
 ---
 In this post we are going to get an overview of the mapper algorithm.  Mapper is
