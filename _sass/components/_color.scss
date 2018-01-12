@@ -6,6 +6,25 @@
 
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
 
+//Custom Colors
+//v for vaiana
+$vblue: (
+  "base": $color1,
+  "lighten-1": $color2,
+  "darken-1": $color3,
+);
+
+$vgray:(
+  "base": $color5,
+  "lighten-1":$color4,
+  "darken-1":$color6,
+);
+
+$vgrey:(
+  "base": $color5,
+  "lighten-1":$color4,
+  "darken-1":$color6,
+);
 
 $materialize-red: (
   "base":       #e51c23,
@@ -358,7 +377,10 @@ $colors: (
   "brown": $brown,
   "blue-grey": $blue-grey,
   "grey": $grey,
-  "shades": $shades
+  "shades": $shades,
+  "vgrey": $vgrey,
+  "vgray": $vgray,
+  "vblue": $vblue,
 ) !default;
 
 
@@ -409,4 +431,3 @@ $colors: (
   @warn "Unknown `#{$color}` - `#{$type}` in $colors.";
   @return null;
 }
-

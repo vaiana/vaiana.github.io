@@ -2,79 +2,18 @@
 layout: default
 title: "Vaiana"
 ---
-<div class="main-banner-wrapper">
-  <div class="main-banner-content">
-    <div class="container">
-      <div class="row white-text">
-        <div class="col s12 m4">
-          <div class="valign-wrapper">
-            <h2><i class="material-icons">all_inclusive</i>Mathematician</h2>
-
-          <!--
-          <h2 class="hide-on-small-and-down intro-med"><i class="material-icons">all_inclusive</i>Mathmatician</h2>
-          <h2 class="hide-on-med-and-up intro-small"><i class="material-icons">all_inclusive</i>Mathmatician</h2>
-        -->
-
-        </div>
-        </div>
-        <div class="col s12 m4">
-          <h2><i class="material-icons">timeline</i>Data Scientist</h2>
-        </div>
-        <div class="col s12 m4">
-          <h2><i class="material-icons">laptop_chromebook</i>Software Engineer</h2>
-        </div>
-        <div class="col s4 push-s4">
-        <a class="waves-effect red btn hide-on-small-and-down center modal-trigger" href="#modal1"><i class="material-icons left">face</i>Hire Me</a>
-        <a class="waves-effect red btn hide-on-med-and-up center modal-trigger" href="#modal1" >Hire Me</a>
-
-      </div>
-    </div>
-  </div>
-  <div class="main-banner-overlay">
-  </div>
-</div>
-</div>
-
-   <!-- Modal Structure -->
-   <div id="modal1" class="modal">
-     <div class="modal-content">
-       <h4>Hire Me</h4>
-       <!--
-       <p class="hire-large">Hi, I'm Mike.</p>
-       <p>I'm a mathematician with a PhD in Computational Data Science.</p> -->
-       <p><i class="material-icons left">email</i>mvaiana@buffalo.edu</p>
-       <p><i class="material-icons left">phone</i>585.880.3851</p>
-       <p><a href="{{site.baseurl}}/assets/mvaiana_resume.pdf" class="text-logo-color" target="_blank"><i class="material-icons left text-logo-color">assignment_ind</i> Resume </a></p>
-       <p><a href="{{site.baseurl}}/assets/mvaiana_cv.pdf" class="text-logo-color" target="_blank"><i class="material-icons left">assignment</i> CV </a></p>
-     </div>
-     <div class="modal-footer">
-       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-     </div>
-   </div>
-
-
-<!--
-<div class="container">
-  <div class="row text-logo">
-    <div class="col s12 m4 l4">
-      <div class="icon-block">
-            <h2 class="center"><i class=" large material-icons">all_inclusive</i></h2>
-            <h4 class="center"> Mathematics </h4>
-      </div>
-    </div>
-    <div class="col s12 m4 l4">
-      <div class="icon-block">
-            <h2 class="center"><i class="large material-icons">timeline</i></h2>
-            <h4 class="center">Data Science</h4>
-      </div>
-    </div>
-    <div class="col s12 m4 l4">
-      <div class="icon-block">
-            <h2 class="center"><i class="large material-icons">videogame_asset</i></h2>
-            <h4 class="center">Coding</h4>
-      </div>
-    </div>
-</div>
-</div>
-</div>
--->
+<h1><i class="material-icons" style="font-size:1em">weekend</i></h1>
+{% for post in site.posts %}
+  <a class="card-title" href="{{post.url}}">
+    <h1 class="post-title">{{post.title}}</h1></a>
+    {% if post.subtitle %}
+      <h2 class="post-subtitle">{{post.subtitle}}</h2>
+    {% endif %}
+  <h6 class="post-date ">
+    <info datetime="{{ page.date }}">
+          Posted {% if post.author %} by {{post.author}} {% endif %} on {{ post.date | date: "%B %-d, %Y"}}
+    </info>
+  </h6>
+    <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+<a href="{{post.url}}">[...more]</a></p>
+{% endfor %}

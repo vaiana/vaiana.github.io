@@ -1,0 +1,17 @@
+.post-title{
+  @extend .reset;
+  font-family: $font-mukta-malar;
+  font-size:2.4em;
+  font-weight:bold;
+}
+
+.post-subtitle{
+  font-family: $font-lato;
+  font-size:1.8em;
+  margin:5px 0 25px 0;
+}
+
+.post-date{
+  font-family: $font-lato;
+  font-style: italic;
+}

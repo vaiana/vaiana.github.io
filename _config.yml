@@ -3,6 +3,9 @@ markdown: kramdown
 permalink: blog/:title.html
 url: http://localhost:4000
 
+excerpt_separator: "<!--more-->"
+
+
 #Sass
-sass:
-  style: compressed
+#sass:
+#  style: compressed
