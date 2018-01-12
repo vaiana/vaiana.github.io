@@ -2,7 +2,18 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>{{ page.title }}</title>
-  <link rel="shortcut icon" href="{{ site.baseurl}}/assets/favicon.png" />
+  <link rel="shortcut icon" href="{{site.baseurl}}/assets/favicon.png" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112413496-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112413496-1');
+  </script>
+
 
   <!-- MathBox -->
   <script src="{{site.baseurl}}/build/mathbox-bundle.js"></script>
@@ -21,11 +32,7 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
 
-  <!-- CSS  -->
-  <!--
-  <link href='{{ site.baseurl}}/css/materialize.min.css' rel='stylesheet'>
-  <link href='{{ site.baseurl}}/css/tweaks.css' rel='stylesheet'>
--->
+
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href='{{ site.baseurl}}/css/main.css' rel='stylesheet'>
   <!-- Fonts -->
