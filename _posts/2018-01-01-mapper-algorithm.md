@@ -40,14 +40,14 @@ For simplicity suppose the highest point is at height 1 and lowest point has hei
 
 ![Mapper Overlap]({{site.baseurl}}/assets/posts/2018-01-01-mapper-inverse-image.png)
 
-We need to cluster the sets $f^{-1}(a_i,b_i)$ by any clustering algorithm and build a graph with one vertex per cluster.  For this post I will be using the cluster-by-visual-inspection algorithm.  The points of $f^{-1}([-1,-\frac{1}{4}])$ all seem to be one cluster so I add one vertex to the graph for this cluster.  The points in $f^{-1}([-\frac{1}{2},\frac{1}{2}])$ seem to form 2 distinct clusters so I will add two vertices to the graph, one for each cluster.  Finally $f^{-1}([\frac{1}{4},1])$ seems to be again one cluster so I add a final vertex to the graph.  If we layout the vertices in a similar arrangement to where they came from in the original data we have the following graph:
+We need to cluster the sets $f^{-1}(a_i,b_i)$ by any clustering algorithm and build a graph with one vertex per cluster.  For this post I will be using the cluster-by-visual-inspection algorithm.  The points of $f^{-1}([-1,-\frac{1}{4}])$ all seem to be one cluster so I add one vertex to the graph for this cluster.  The points in $f^{-1}([-\frac{1}{2},\frac{1}{2}])$ seem to form 2 distinct clusters so I will add two vertices to the graph, one for each cluster.  Finally $f^{-1}([\frac{1}{4},1])$ seems to be again one cluster so I add a final vertex to the graph.  If we layout the vertices in a similar arrangement to where they came from in the original data and add edges between vertices whenever the clusters overlap we have the following graph
 
 ![Mapper Graph Without Edges]({{site.baseurl}}/assets/posts/2018-01-01-mapper-graph-no-edges.png)
 
-The only thing left to do is determine the edges between the vertices.  Each vertex is associated to a local cluster and there is an edge between vertices if the clusters have any points in common.  Therefore we get the final representation:
-
-![Mapper Graph With Edges]({{site.baseurl}}/assets/posts/2018-01-01-mapper-graph-edges.png)
-
 We have reduced our noisy circle to a simple graph, 4 data points with 4 edges. Even better is that the graph is topologically equivalent to a circle so we have retained the overall 'shape' of the data.  We could have chosen to color or size to nodes to add to the visual information present in the graph but I didn't do that here.
 
-If you understand this example then you understand the basic idea behind mapper.  Come up with some examples on your own or go read the [original paper]((http://cs233.stanford.edu/ReferencedPapers/mapperPBG.pdf)).  In a future post we will discuss more example, and how mapper and machine learning can be combined.
+If you understand this example then you understand the basic idea behind mapper.  Come up with some examples on your own or go read the [original paper](http://cs233.stanford.edu/ReferencedPapers/mapperPBG.pdf).  In a future post we will discuss more example, and how mapper and machine learning can be combined.
+
+
+<!-- #### I Told a Lie: Good Covers
+I said there was no particular reason for the choice of intervals $[-1,-\frac{1}{4}],[-\frac{1}{2},\frac{1}{2}],[\frac{1}{4},1].$  This is not entirely true.  The shape of the graph in the end was topologically equivalent to a circle and for this to happen we needed to choose a set of intervals with a nice property.  The inverse image of the intervals needs to form a 'good cover' of the data.  This means that the intersection of any number of the inverse images needs to be contractible.  What does it mean for data to be contractible? Who know -->
